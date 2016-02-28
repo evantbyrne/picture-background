@@ -1,6 +1,6 @@
 # picture-background
 
-Converts picture tags into background-image CSS styles.
+Converts picture tags into background-image CSS styles. Updates with window resize events, just like `<picture>` does by default.
 
 ## Motivation
 
