@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang='en'>
+	<head>
+		<meta charset='utf-8' />
+		<link rel="stylesheet" type="text/css" href="../node_modules/mocha/mocha.css" />
+	</head>
+	<body>
+		<div id="mocha"></div>
+		<div style="display: none;">
+			<!-- No sources -->
+			<div id="noSources">
+				<picture>
+					<img alt="placeholder" src="400x300.png" />
+				</picture>
+			</div>
+
+			<!-- One source, simple srcset -->
+			<div id="oneSource">
+				<picture>
+					<source srcset="800x600.png" media="(min-width: 600px)" />
+					<img alt="placeholder" src="400x300.png" />
+				</picture>
+			</div>
+
+			<!-- Multiple sources, simple srcset, one match -->
+			<div id="multipleSourcesOneMatch">
+				<picture>
+					<source srcset="1000x600.png" media="(min-width: 800px)" />
+					<source srcset="800x600.png" media="(min-width: 600px)" />
+					<img alt="placeholder" src="400x300.png" />
+				</picture>
+			</div>
+		</div>
+
+		<script src="http://code.jquery.com/jquery-2.2.1.min.js"></script>
+		<script src="../node_modules/expect.js/index.js"></script>
+		<script src="../node_modules/mocha/mocha.js"></script>
+		<script src='../picture-background.min.js'></script>
+		<script>
+			mocha.setup('bdd');
+		</script>
+		<script src="test.js"></script>
+		<script>
+			(function($) {
+				mocha.checkLeaks();
+				mocha.run();
+			}(jQuery));
+		</script>
+	</body>
+</html>
