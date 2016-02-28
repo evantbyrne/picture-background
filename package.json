@@ -1,6 +1,6 @@
 {
   "author": "Evan Byrne <evantbyrne@gmail.com> (https://evanbyrne.com/)",
-  "description": "Converts picture tags into divs with background images.",
+  "description": "Converts picture tags into background-image CSS styles.",
   "devDependencies": {
     "expect.js": "0.3.1",
     "gulp": "3.9.1",
